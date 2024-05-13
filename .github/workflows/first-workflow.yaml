@@ -27,4 +27,4 @@ jobs:
       - name: echo a string
         run: Write-Output "Hello World from Windows"
       - name: Error step
-        run: doesnotexist
+        run: doesnotexists
