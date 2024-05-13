@@ -19,3 +19,10 @@ jobs:
 
       - name: Setting up an notice message with parameters
         run: echo "::notice title:Notice title,file=app.js,line=2,col=5::Missing Semicolon"
+
+      - name: Group of logs
+        run: |
+          echo "::group::Grouping logs"
+          echo "This is the first line"
+          echo "This is the second line"
+          echo "::endgroup::"
