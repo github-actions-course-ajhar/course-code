@@ -11,3 +11,20 @@ jobs:
         run: | # Pipe character is used to write a string in multiple lines as it adds a new`line character at the end of each line
           node -v
           npm -v
+
+  parallel-job-macos:
+    runs-on: macos-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello World"
+      - name: View SW Version
+        run: sw_vers
+
+  dependant-job:
+    runs-on: windows-latest
+    needs: run-shell-commands
+    steps:
+      - name: echo a string
+        run: Write-Output "Hello World from Windows"
+      - name: Error step
+        run: doesnotexist
