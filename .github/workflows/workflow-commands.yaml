@@ -26,3 +26,7 @@ jobs:
           echo "This is the first line"
           echo "This is the second line"
           echo "::endgroup::"
+      - name: Masking a value
+        run: echo "::add-mask::mysecret"
+      - name: Echo a secret
+        run: echo mysecret
