@@ -1,4 +1,4 @@
-name: Checkout
+name: Checkout_now
 on: [push]
 
 jobs:
